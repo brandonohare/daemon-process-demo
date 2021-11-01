@@ -3,7 +3,7 @@ Description=Test Daemon Service
 
 [Service]
 Type=forking
-ExecStart=/home/veritas/daemon-process-demo/daemonProc
+ExecStart=/usr/bin/daemonProc
  
 [Install]
 WantedBy=multi-user.target

@@ -24,6 +24,7 @@ $(TARGET): $(SOURCE)
 install: all
 
 	$(INSTALL) -d $(VARLOG)
+	$(INSTALL) $(TARGET) /usr/bin
 	$(INSTALL) temporary/first $(VARLOG)
 	$(INSTALL) temporary/second $(VARLOG)
 	$(INSTALL) temporary/third $(VARLOG)
@@ -35,6 +36,6 @@ uninstall: all
 	rm -rf $(VARLOG)
 	systemctl stop testDaemon
 	rm -f $(SYSDLOC)/testDaemon.service
-	rm daemonProc
+	rm -f /usr/bin/daemonProc
 	systemctl daemon-reload
 
