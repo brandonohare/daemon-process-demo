@@ -1,0 +1,9 @@
+[Unit]
+Description=Test Daemon Service
+
+[Service]
+Type=forking
+ExecStart=/home/veritas/daemon-process-demo/daemonProc
+ 
+[Install]
+WantedBy=multi-user.target
